@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chance Playground - Coin Toss</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <h1>🪙 Coin Toss Island</h1>
+      <p class="subtitle">Pick Heads or Tails, then flip and see what happens!</p>
+    </header>
+
+    <main class="content">
+      <section class="coin-area">
+        <div id="coin" class="coin" aria-label="Coin">
+          <span id="coinFace" class="coin-face">🙂</span>
+        </div>
+
+        <div class="pick">
+          <p class="label">Your guess:</p>
+          <div class="btn-row">
+            <button id="guessHeads" class="btn">Heads 🙂</button>
+            <button id="guessTails" class="btn">Tails 😎</button>
+          </div>
+          <p id="currentGuess" class="hint">No guess yet</p>
+        </div>
+
+        <div class="actions">
+          <p class="label">Flip the coin:</p>
+          <div class="btn-row">
+            <button id="flip1" class="btn primary">Flip 1</button>
+            <button id="flip10" class="btn primary">Flip 10</button>
+            <button id="flip50" class="btn primary">Flip 50</button>
+            <button id="flip100" class="btn primary">Flip 100</button>
+          </div>
+        </div>
+
+        <div class="message-box">
+          <p id="message" class="message">Make a guess, then flip!</p>
+        </div>
+      </section>
+
+      <section class="stats-area">
+        <h2>📊 Results</h2>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-title">Heads 🙂</div>
+            <div class="bar-wrap">
+              <div id="headsBar" class="bar"></div>
+            </div>
+            <div id="headsCount" class="stat-value">0</div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-title">Tails 😎</div>
+            <div class="bar-wrap">
+              <div id="tailsBar" class="bar"></div>
+            </div>
+            <div id="tailsCount" class="stat-value">0</div>
+          </div>
+        </div>
+
+        <div class="totals">
+          <p>Total flips: <span id="totalFlips">0</span></p>
+          <p>Correct guesses: <span id="correctGuesses">0</span></p>
+        </div>
+
+        <div class="utility">
+          <button id="reset" class="btn danger">Reset Progress</button>
+        </div>
+
+        <footer class="small">
+          <p>Tip: One flip can be random. Many flips show a pattern!</p>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
